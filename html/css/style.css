@@ -15,19 +15,19 @@ body {
   font-family: "Roboto", Arial, sans-serif;
   line-height: 1.8;
   font-size: 20px;
-  background: #eeeff0;
+  background: #fff;
   font-weight: 300;
 }
 
 a {
-  color: #52d3aa;
+  color: #993333;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 a:hover {
   text-decoration: underline !important;
-  color: #52d3aa !important;
+  color: #993333 !important;
 }
 a:focus, a:active {
   outline: none;
@@ -36,13 +36,13 @@ a:focus, a:active {
 p {
   margin-bottom: 1.5em;
   font-size: 20px;
-  color: #848484;
+  color: #b3b3b3;
   font-weight: 300;
   font-family: "Roboto", Arial, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #000;
+  color: #fff;
   font-family: "Roboto Slab", Arial, sans-serif;
   font-weight: 400;
   margin: 0 0 30px 0;
@@ -63,8 +63,16 @@ h1, h2, h3, h4, h5, h6 {
   background: #52d3aa;
 }
 
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* header */
+
 .box-wrap {
-  background: #fff;
+  background: #000000;
   max-width: 1300px;
   margin: 0 auto;
 }
@@ -82,7 +90,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #fh5co-header .navbar-default {
   border: transparent;
-  background: #fff;
+  background: #000000;
 }
 #fh5co-header .navbar {
   padding: 0;
@@ -91,10 +99,11 @@ h1, h2, h3, h4, h5, h6 {
 #fh5co-header .fh5co-navbar-brand {
   width: 100%;
   margin: 0;
+  background-color: #000;
 }
 #fh5co-header .fh5co-navbar-brand .fh5co-logo {
-  width: 52px;
-  height: 30px;
+  width: 100%;
+  height: 100%;
   padding: 0;
   font-size: 18px;
 }
@@ -104,26 +113,40 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 40px;
   }
 }
+
+#fh5co-header .header_nav {
+  margin-top: 1.5em;
+}
+
 #fh5co-header .nav {
   width: 100%;
+  background-color: #000; 
 }
+
 #fh5co-header .nav li {
   font-size: 20px;
   display: inline-block;
   margin-left: 50px;
 }
+
 @media screen and (max-width: 480px) {
   #fh5co-header .nav li {
     width: 100%;
     margin-left: 0;
   }
+
+  #fh5co-header .header_nav {
+  margin-top: 1em;
+  }
 }
+
 #fh5co-header .nav li:first-child {
   margin-left: 0;
 }
+
 #fh5co-header .nav li a {
   font-family: "Roboto Slab", Arial, sans-serif;
-  color: black;
+  color: #fff;
   position: relative;
   font-weight: 400;
   -webkit-transition: 0.5s;
@@ -131,6 +154,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.5s;
   padding: 0;
 }
+
 #fh5co-header .nav li a:hover, #fh5co-header .nav li a:focus {
   color: gray !important;
   background: transparent;
@@ -141,36 +165,46 @@ h1, h2, h3, h4, h5, h6 {
     padding: 10px 0;
   }
 }
+
 #fh5co-header .nav li.active a {
-  color: #000;
+  color: #fff;
   background: transparent;
-  border-bottom: 2px solid #52d3aa;
+  border-bottom: 2px solid #993333;
 }
+
 @media screen and (max-width: 992px) {
   #fh5co-header .nav li.active a {
     color: #000;
   }
 }
+
 @media screen and (max-width: 480px) {
   #fh5co-header .nav li.active a {
     border-bottom: 2px solid transparent;
-    color: #52d3aa;
+    color: #993333;
   }
 }
+
 @media screen and (max-width: 992px) {
   #fh5co-header .nav {
     margin-bottom: 40px;
   }
 }
 
-#intro, #work, #product, #about, #services {
-  padding-bottom: 5em;
+/* each section */
+
+#intro, #about, #product, #about, #services {
+  padding-top: 3em;
+  padding-bottom: 3em;
+  background-color: #0d0d0d; 
 }
 @media screen and (max-width: 768px) {
-  #intro, #work, #product, #about, #services {
+  #intro, #about, #product, #about, #services {
     padding-bottom: 3em;
   }
 }
+
+/* main */
 
 #main {
   padding-bottom: 7em;
@@ -186,6 +220,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 30px;
   font-weight: 300;
   line-height: 1.5em;
+  color: #fff;
 }
 
 #services .service {
@@ -215,18 +250,18 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 18px;
 }
 
-#work .fh5co-grid {
+#about .fh5co-grid {
   height: 625px;
   background-size: cover;
   margin-bottom: 30px;
   position: relative;
 }
 @media screen and (max-width: 480px) {
-  #work .fh5co-grid {
+  #about .fh5co-grid {
     height: 400px;
   }
 }
-#work .fh5co-grid .image-popup {
+#about .fh5co-grid .image-popup {
   position: absolute;
   top: 20px;
   bottom: 20px;
@@ -235,7 +270,7 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(255, 255, 255, 0.9);
   opacity: 0;
 }
-#work .fh5co-grid .image-popup .work-title {
+#about .fh5co-grid .image-popup .about-title {
   position: absolute;
   top: 50%;
   bottom: 20px;
@@ -243,16 +278,16 @@ h1, h2, h3, h4, h5, h6 {
   right: 20px;
   margin-top: -25px;
 }
-#work .fh5co-grid .image-popup .work-title span {
+#about .fh5co-grid .image-popup .about-title span {
   color: gray;
   letter-spacing: 2px;
   font-size: 12px;
   text-transform: uppercase;
 }
-#work .fh5co-grid .image-popup .work-title h3 {
+#about .fh5co-grid .image-popup .about-title h3 {
   margin-bottom: 10px;
 }
-#work .fh5co-grid:hover .image-popup {
+#about .fh5co-grid:hover .image-popup {
   opacity: 1;
 }
 
@@ -311,38 +346,55 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+
+/* footer */
+footer {
+  background-color: #000;
+  padding-top: 2em
+}
+
+footer .fh5co-navbar-brand {
+  padding-bottom: 2em;
+}
+
 footer p {
   line-height: 1;
+  padding-top: 1em;
 }
+
 footer .border {
   border-top: 1px solid #e6e6e6;
   padding: 2em 0;
   float: left;
   width: 100%;
 }
-@media screen and (max-width: 768px) {
-  footer .border {
-    padding: 2em 15px !important;
-  }
+
+footer .border .accomodation, .opening_time, .number, .email, .social_icon {
+  width: 20%;
+  float: left;
+} 
+
+footer .border .social li {
+  margin-top: 11px;
 }
-@media screen and (max-width: 480px) {
-  footer .border {
-    padding: 2em 15px !important;
-    padding-bottom: 2em !important;
-  }
-}
+
 footer p {
   margin-bottom: 0;
+  font-size: 16px;
 }
+
 footer small {
+  color: #fff;
   text-transform: uppercase;
   font-weight: 400;
   font-size: 14px;
   letter-spacing: .01em;
   font-family: "Roboto", Arial, sans-serif;
 }
-footer .social {
-  text-align: center;
+
+footer .social .icon-twitter, .icon-instagram, .icon-facebook {
+  font-size: 18px;
+  margin-top: 13px;
 }
 
 .section-heading {
@@ -352,22 +404,50 @@ footer .social {
   margin-bottom: 50px;
   clear: both;
 }
-@media screen and (max-width: 768px) {
-  .section-heading h2 {
-    font-size: 30px;
-  }
-}
+
 .section-heading p {
   font-size: 20px;
   font-weight: 300;
   color: #848484;
 }
+
 @media screen and (max-width: 768px) {
   .section-heading p {
     font-size: 24px !important;
     line-height: 34px;
+    text-align: center;
+  }
+
+  .section-heading h2 {
+    font-size: 30px;
+  }
+
+  footer .border .accomodation, .opening_time, .number, .email, .social_icon {
+    width: 100%;
+    margin: 20px;
+  }
+  
+  footer .border .accomodation h5, .opening_time h5, .number h5, .email h5, .social_icon h5 {
+    margin-bottom: 5px;
+  } 
+
+  .social li {
+    list-style: none;
+    padding: 0 10px;
+    margin: 0;
+    display: inline-block;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+  footer .border {
+    padding: 2em 15px !important;
+    padding-bottom: 2em !important;
   }
 }
+
+/*  form-control */
 
 .form-control {
   display: block;
@@ -377,7 +457,7 @@ footer .social {
   font-size: 20px;
   line-height: 1.42857;
   color: #555555;
-  background-color: #fff;
+  background-color: #1a1a1a;
   background-image: none;
   border: 2px solid #ccc;
   border-radius: 4px;
@@ -405,6 +485,8 @@ footer .social {
   }
 }
 
+
+/* btn */
 .btn {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
@@ -437,17 +519,20 @@ footer .social {
   border-color: transparent;
 }
 
+
+/* social */
+
 .social {
+  background-color: #000000; 
   padding: 0;
   margin: 0;
   display: inline-block;
   position: relative;
   width: 100%;
-  text-align: right;
 }
 .social li {
   list-style: none;
-  padding: 0;
+  padding: 0 10px;
   margin: 0;
   display: inline-block;
 }
@@ -457,13 +542,13 @@ footer .social {
   width: 24px;
   height: 24px;
   margin: 0 4px;
-  color: #000;
+  color: #fff;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 .social li a:hover, .social li a:focus {
-  color: #52d3aa;
+  color: #993333;
   text-decoration: none;
 }
 .social li a i {
