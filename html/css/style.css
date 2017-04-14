@@ -253,14 +253,23 @@ h1, h2, h3, h4, h5, h6 {
 
 #about .fh5co-grid {
   height: 625px;
+  border: 3px solid #000;
   background-size: cover;
   margin-bottom: 30px;
   position: relative;
 }
 @media screen and (max-width: 480px) {
   #about .fh5co-grid {
-    height: 400px;
+    height: 600px;   
   }
+  .about-title_mobile {
+    display: none;
+  }
+  #about .fh5co-grid .image-popup .about-title {
+  position: absolute;
+  top: 40%;
+}
+
 }
 #about .fh5co-grid .image-popup {
   position: absolute;
