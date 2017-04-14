@@ -88,6 +88,25 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: 80px;
   }
 }
+
+.style_pc {
+    display: block;
+}
+
+.style_mobile {
+    display: none;  
+}
+
+@media screen and (max-width: 768px) {
+  .style_pc {
+    display: none;
+  }
+
+  .style_mobile {
+    display: block;  
+  }
+}
+
 #fh5co-header .navbar-default {
   border: transparent;
   background: #000000;
