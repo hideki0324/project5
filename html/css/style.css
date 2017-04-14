@@ -470,6 +470,11 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: 0;
 }
 
+
+#location .col-md-6.col-xs-12.animate-box{
+  border-right: 1px solid #666;
+}
+
 #location .fh5co-grid .image-popup .location-title {
   position: absolute;
   top: 50%;
@@ -494,10 +499,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 40px;
   float: left;
   width: 100%;
-}
-
-#location .location_map{
-  border-right: 1px solid #222;
 }
 
 #location .location_text {
